@@ -2,4 +2,6 @@
 
 2016/8/17 学习express4.0的session和cookie，重新写了一个登录退出功能，成功。（day02_session）
 
+2016/8/17 nodejs语法学习记录 nodeTest/day01
+
 
