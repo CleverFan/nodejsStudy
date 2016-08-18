@@ -4,4 +4,6 @@
 
 2016/8/17 nodejs语法学习记录 nodeTest/day01
 
+2016/8/18 学习socket.io，使用socket.io实现基本聊天功能。（day03_socketio）
+
 
