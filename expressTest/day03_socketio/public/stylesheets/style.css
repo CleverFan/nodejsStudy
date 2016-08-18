@@ -6,3 +6,72 @@ body {
 a {
   color: #00B7FF;
 }
+
+table {
+  width: 100%;
+}
+
+table.tool {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+}
+
+#content {
+  height: auto;
+  padding: 10px;
+  padding-bottom: 32px;
+}
+
+#content tr {
+  margin-bottom: 10px;
+}
+#textContent {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+.left {
+  width: 88%;
+}
+
+#send {
+  width: auto;
+  padding: 2px 12px;
+  line-height: 26px !important;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  background-color: #ff4400;
+}
+
+tr.align-left td > span {
+  float: left;
+}
+
+tr.align-left td > span span {
+  display: inline-block;
+}
+
+tr.align-right td > span {
+  float: right;
+}
+
+tr.align-right td > span span {
+  display: inline-block;
+}
+
+span .msg {
+  padding: 6px;
+  background-color: #00B7FF;
+  border: 1px solid #00B7ee;
+  border-radius: 5px;
+}
+
+.timer {
+  display: block;
+  text-align: center;
+}

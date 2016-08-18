@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link href="/stylesheets/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div>
+    <table id="content">
+    </table>
+</div>
+
+<table class="tool">
+    <tr>
+        <td class="left">
+            <div id="textContent" contenteditable="true" type="text"></div>
+        </td>
+        <td>
+            <button id="send">发送</button>
+        </td>
+    </tr>
+</table>
+<script>
+    var socket = io.connect('http://127.0.0.1:3000');
+    var userName = "访客某某";
+    socket.on('connect', function () {
+        userName = prompt("请输入你的姓名?") || userName;
+        socket.emit('join', userName);
+    });
+    socket.on('chat', function (user, data) {
+        if (user === userName) {
+            $('<tr class="align-right"><td><span><span class="msg">' + data + '</span>' + user + '</span></td></tr>').appendTo($('#content'));
+        } else {
+            $('<tr class="align-left"><td><span >' + user + '<span class="msg">' + data + '</span></span></td></tr>').appendTo($('#content'));
+        }
+        p.className = direct;
+    });
+    $('#send').click(function () {
+        var content = $('#textContent').html();
+        if (content = content.replace(" ", "")) {
+            socket.emit('sendMsg', content);
+            $('#textContent').html("");
+        }
+    });
+</script>
+</body>
+</html>
