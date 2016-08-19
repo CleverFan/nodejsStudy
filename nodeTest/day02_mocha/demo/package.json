@@ -1,0 +1,13 @@
+{
+  "name": "mocha-test",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha test"
+  },
+  "devDependencies": {
+    "superagent": "1.4.0",
+    "chai": "3.4.0"
+  }
+}
